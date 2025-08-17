@@ -1,0 +1,148 @@
+/* === Bouton “Ajouter une liste” global === */
+.bouton-ajouter-liste {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 8px 12px;
+  background-color: #e86813;
+  color: #000000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* === Structure générale === */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.839);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  
+}
+
+#tableau-trello {
+  display: flex;
+  gap: 30px;
+  margin-top: 90px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+/* === Liste === */
+.liste {
+  background-color: #dfd3c6;
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.liste h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* === Conteneur de tâches === */
+.taches {
+  min-height: 50px;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* === Tâche === */
+.tache {
+  position: relative;
+  background-color: #32f11513;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 6px;
+  cursor: grab;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.tache[draggable="true"] {
+  cursor: move;
+}
+
+.tache:focus {
+  outline: 2px solid #0079bf;
+  background-color: #fff;
+}
+
+/* === Boutons === */
+.bouton-ajouter-carte {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #25ad167d;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bouton-ajouter-carte:hover {
+  background-color: #005f9e;
+}
+
+.bouton-supprimer-liste,
+.bouton-supprimer-carte {
+  background: none;
+  border: none;
+  color: #c00;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bouton-supprimer-liste:hover,
+.bouton-supprimer-carte:hover {
+  color: #f00;
+}
+
+.bouton-supprimer-carte {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+/*  On annule l’absolu et on remet le bouton dans le flux */
+.bouton-supprimer-liste {
+  position: static;/* annule top/right */
+  background: none;
+  border: none;
+  color: #c00;
+  cursor: pointer;
+  font-size: 1rem; /* taille à ajuster si besoin */
+  margin-left: 0.5rem;  /* espace entre le titre et la croix */
+  display: inline-block; /* pour qu’il soit sur la même ligne que le H2 */
+  vertical-align: middle;/* aligne le centre du bouton sur le texte */
+  
+}
+
+/*  On force le H2 à ne pas prendre toute la ligne */
+.liste h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;/* enlève marge par défaut si besoin */  
+  padding: 0;
+}
+
+/*  petit hover pour la couleur */
+.bouton-supprimer-liste:hover {
+  color: #f00;
+}
+
+
+/* === Drag & Drop === */
+.en-train-de-glisser,
+.en-train-de-glisser-liste {
+  opacity: 0.5;
+  border: 2px dashed #333;
+}
