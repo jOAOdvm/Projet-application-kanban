@@ -29,11 +29,37 @@ nav{
   text-decoration: none;
 }
 
-.container{
+.container1{
     display:flex;
 
 }
+.inscriptiongauche{
+     margin-left: 1rem;
+}
 .inscriptionimagedroite{
-    
+     
     width: 60%;
+    
+}
+.container2{
+    align-items: flex-start;
+    display: flex;
+    margin-left: 1rem;
+}
+
+.messageaction{
+    display: block;
+    position:relative;
+    text-align:center;
+    width:100;
+
+}
+.textebutoncarrousel{
+   
+}
+.boxinbox{
+    display: flex;
+}
+.boxmagic{
+    display: flex;
 }
