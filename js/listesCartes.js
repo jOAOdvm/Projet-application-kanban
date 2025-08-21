@@ -6,21 +6,27 @@ let boardContainer = null;// Conteneur principal
 // Création de l’interface de base-------------------------------------------------------------------
 export function initInterface() {
   // Titre
+  const header = document.createElement('header');
   const title = document.createElement('h1');
   title.textContent = 'Tableau Kanban';
-  document.body.appendChild(title);
+  header.appendChild(title)
+  document.body.appendChild(header);
 
+  const main = document.createElement('main');
+  
   // Bouton “Ajouter une liste”
   const btnAddList = document.createElement('button');
   btnAddList.id = 'btn-add-list';
   btnAddList.className = 'bouton-ajouter-liste';
   btnAddList.textContent = ' Ajouter une liste';
-  document.body.appendChild(btnAddList);
+  main.appendChild(btnAddList);
 
   // Conteneur des listes
   boardContainer = document.createElement('div');
   boardContainer.id = 'tableau-trello';
-  document.body.appendChild(boardContainer);
+  main.appendChild(boardContainer);
+
+  document.body.appendChild(main);
 }
 
 // quand on clique sur  “Ajouter une liste”----------------------------------------------------------
