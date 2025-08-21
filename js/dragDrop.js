@@ -3,7 +3,7 @@ import { saveStorage, kanbanData } from './localStorage.js';
 //  Fonction principale pour activer le Drag & Drop
 export function initDragAndDrop() {
   let draggedEl = null; //  Variable qui garde l'élément qu'on est en train de glisser
- 
+
   //  Quand on commence à glisser une liste ou une tâche-----------------------------------------------
   document.addEventListener('dragstart', (e) => {
     if (e.target.classList.contains('liste') || e.target.classList.contains('tache')) {// verifie si cest une liste ou une tache
@@ -58,7 +58,6 @@ export function initDragAndDrop() {
       board.appendChild(draggedEl);
     }
 
- 
 
   });
 
@@ -80,4 +79,3 @@ export function initDragAndDrop() {
     }
   });
 }
- 

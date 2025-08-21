@@ -67,7 +67,7 @@ export function createListInDOM(listeData, listeIndex) {
   const btnDeleteList = document.createElement('button');
   btnDeleteList.className = 'bouton-supprimer-liste';
   btnDeleteList.textContent = '×';
-  // btnDeleteList.setAttribute
+  btnDeleteList.setAttribute("aria-label","bouton x qui supprime la liste");
   btnDeleteList.addEventListener('click', () => {
     kanbanData.splice(listeIndex, 1);// add atribut arialabel
     listEl.remove();
